@@ -1,22 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="301dp"
-        android:layout_height="176dp"
-        android:layout_row="0"
-        android:layout_column="0"
-        android:text="Update coming soon. please be patient"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:id="@+id/PositionState"
+        android:text="Browse"
+        style="@style/FirstBarText"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        style="@style/linearLayout">
+        <TextView
+            android:id="@+id/WhatsNew"
+            android:text="What's new"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/orange"
+            style="@style/SecondBarSlider"/>
+        <TextView
+            android:id="@+id/ForMe"
+            android:text="For me"
+            tools:ignore="HardcodedText"
+            style="@style/SecondBarSlider"/>
+        <TextView
+            android:id="@+id/ByGenre"
+            android:text="By genre"
+            tools:ignore="HardcodedText"
+            style="@style/SecondBarSlider"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:srcCompat="@mipmap/ic_launcher_round"
+        android:contentDescription="New Songs"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        style="@style/linearLayout">
+
+        <TextView
+            android:id="@+id/NewAlbums"
+            style="@style/ThirdBar"
+            android:text="New Albums"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/SeeAll"
+            style="@style/ThirdBar"
+            android:textColor="@color/pale_white"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="160dp"
+            android:text="see All"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
