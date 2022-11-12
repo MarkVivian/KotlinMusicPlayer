@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,62 +8,174 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/PositionState"
-        android:text="Browse"
-        style="@style/FirstBarText"
+        android:id="@+id/Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Browser"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
 
     <LinearLayout
-        style="@style/linearLayout">
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Location">
+
         <TextView
-            android:id="@+id/WhatsNew"
-            android:text="What's new"
-            tools:ignore="HardcodedText"
+            android:id="@+id/New"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What's New"
             android:textColor="@color/orange"
-            style="@style/SecondBarSlider"/>
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
         <TextView
             android:id="@+id/ForMe"
-            android:text="For me"
-            tools:ignore="HardcodedText"
-            style="@style/SecondBarSlider"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="For Me"
+            android:textColor="@color/pale_white"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
         <TextView
-            android:id="@+id/ByGenre"
-            android:text="By genre"
-            tools:ignore="HardcodedText"
-            style="@style/SecondBarSlider"/>
+            android:id="@+id/Genres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="By Genres"
+            android:textColor="@color/pale_white"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        app:srcCompat="@mipmap/ic_launcher_round"
-        android:contentDescription="New Songs"
+    <View
+        android:id="@+id/newImage"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/newImage"
+        app:layout_constraintTop_toTopOf="@+id/newImage">
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/heart_icon" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/download_icon" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:text="The top 10 Hottest underground Music"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/newImage"
+        app:layout_constraintStart_toStartOf="@+id/newImage"
         tools:ignore="HardcodedText" />
 
     <LinearLayout
-        style="@style/linearLayout">
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newImage">
 
         <TextView
             android:id="@+id/NewAlbums"
-            style="@style/ThirdBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="New Albums"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <TextView
-            android:id="@+id/SeeAll"
-            style="@style/ThirdBar"
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="See All"
+            android:textAlignment="viewEnd"
             android:textColor="@color/pale_white"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="160dp"
-            android:text="see All"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
-
     </LinearLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
