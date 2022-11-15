@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="411dp"
+        android:layout_height="59dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/Library"
+            android:layout_width="71dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:gravity="bottom|center_horizontal"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp"
+            android:text="library"
+            android:textAlignment="gravity"
+            android:textColor="@color/pale_white"
+            android:textStyle="bold"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Discover"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/libraryView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/playlist_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/Library"
+            app:layout_constraintEnd_toEndOf="@+id/Library"
+            app:layout_constraintHorizontal_bias="0.575"
+            app:layout_constraintStart_toStartOf="@+id/Library"
+            app:layout_constraintTop_toTopOf="@+id/Library"
+            app:layout_constraintVertical_bias="0.12" />
+
+        <Button
+            android:id="@+id/Search"
+            android:layout_width="71dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:gravity="bottom|center_horizontal"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp"
+            android:text="Search"
+            android:textAlignment="gravity"
+            android:textColor="@color/pale_white"
+            android:textStyle="bold"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Settings"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/searchView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/search_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/Search"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="@+id/Search"
+            app:layout_constraintTop_toTopOf="@+id/Search"
+            app:layout_constraintVertical_bias="0.137" />
+
+        <Button
+            android:id="@+id/Settings"
+            android:layout_width="83dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="62dp"
+            android:background="@android:color/transparent"
+            android:gravity="bottom|center_horizontal"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp"
+            android:text="settings"
+            android:textAlignment="gravity"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/settingsView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/settings_icon_colored"
+            app:layout_constraintEnd_toEndOf="@+id/Settings"
+            app:layout_constraintStart_toStartOf="@+id/Settings"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/discoverView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/library_music"
+            app:layout_constraintBottom_toBottomOf="@+id/Discover"
+            app:layout_constraintEnd_toEndOf="@+id/Discover"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="@+id/Discover"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <Button
+            android:id="@+id/Discover"
+            android:layout_width="81dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:gravity="bottom|center_horizontal"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp"
+            android:text="discover"
+            android:textAlignment="gravity"
+            android:textColor="@color/pale_white"
+            android:textStyle="bold"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
